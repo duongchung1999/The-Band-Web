@@ -1,0 +1,520 @@
+/* RESET */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth; /*cuộn trang */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* common */
+.clear{
+    clear: both;
+}
+
+.text-white{
+    color: white!important;
+}
+.text-center{
+    text-align: center!important;
+}
+
+.row{
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.col{
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.col-third{
+    width: 33.33333%;
+    float: left;
+}
+
+.col-half{
+    width: 50%;
+}
+
+.col-full{
+    width: 100%;
+}
+
+.mt-8 {
+    margin-top: 8px!important;
+}
+
+.mt-16 {
+    margin-top: 16px;
+}
+
+/* main */
+#main{
+
+}
+#header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 46px;
+    background-color: black;
+    z-index: 1;
+}
+
+#nav{
+    /* width: 95%; */
+    float: left;
+}
+#nav,.subnav{
+    list-style-type: none; /*bỏ dấu chấm đầu câu */
+
+}
+
+#nav > li{
+    display: inline-block;
+}
+
+#nav li{
+    
+    position: relative;
+}
+
+#nav > li > a{
+    color: white;
+}
+
+#nav .subnav a{
+    color: black;
+    padding: 0 16px;
+    line-height: 38px;
+    
+}
+
+#nav li a{
+    text-decoration: none;
+    line-height: 46px; /* căn chữ nằm giữa thanh header */
+    padding: 0 24px;   /* trên dưới o và hai bên 24px */
+    display: block;
+}
+
+#nav li:hover .subnav {
+    display: block;
+}
+#nav .subnav li:hover a,
+#nav > li:hover > a{
+    color: black;
+    background-color: #ccc;
+}
+
+#nav .nav-arrow-down{
+    font-size: 14px;
+}
+#header .mobile-menu-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+
+#header .mobile-menu-btn,
+#header .search-btn{
+    float: right;
+    /* width: 5%; */
+    padding: 0 20px;
+}
+#header .mobile-menu-btn:hover {
+    background-color: white;
+}
+
+#header .mobile-menu-btn:hover .menu-icon {
+    color: black;
+}
+
+#header .search-btn:hover{
+    background-color: red;
+    cursor: pointer;  /* chuyển chuột thành bàn tay  */
+
+}
+#header .menu-icon,
+#header .search-icon{
+    color: #fff;
+    font-size: 20px;
+    line-height: 46px;
+}
+
+#nav .subnav{
+    min-width: 160px;
+    display: none;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    position: absolute;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+}
+
+#slider{
+    position: relative;
+    margin-top: 46px;
+    padding-top: 50%; /* chiều rộng ảnh bằng 50% chiều cao ảnh */
+    background: top center / cover no-repeat;
+}
+
+#slider .text-content{
+    position: absolute;
+    bottom: 47px;
+    color: white;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+
+}
+#slider .text-heading{
+    margin: 20px;
+    font-weight: 500;
+
+}
+#slider .text-description{
+    margin-top: 10px;
+    text-shadow: 0 0 1px #000;
+}
+#content{
+
+}
+
+#content .content-section{
+    width: 800px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 64px 0;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+#content .section-heading{
+    font-weight: 500;
+    letter-spacing: 4px;
+    margin: 10px 0;
+    text-align: center;
+    box-sizing: inherit;
+}
+
+#content .section-sub-heading{
+    margin: 32px 0;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.5;
+    opacity: 0.6;
+    box-sizing: inherit;
+    text-align: center;
+    font-style: italic;
+}
+
+#content .about-text{
+    text-align: justify;
+    box-sizing: inherit;
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 15px 0;
+
+}
+
+#content .about-image{
+    text-align: center;
+    padding: 32px 0;
+    box-sizing: inherit; 
+    display: block;
+}
+
+#content .image1{
+    width: 33.33333%;
+    float: left;
+}
+
+#content .image2{
+    width: 33.33333%;
+    float: right;
+
+}
+
+#content .image3{
+    width: 33.33333%;
+    float: right;
+}
+
+#content .name{
+    font-size: 15px;
+    margin: 15px 0;
+}
+
+#content .image{
+    width: 60%;
+    border-radius: 4px; /* bo góc ảnh 4px */
+    margin-bottom: 16px;
+    vertical-align: middle;
+}
+
+.tour-section{
+    background-color: black;
+}
+
+.tickets-list{
+    background-color: white;
+}
+
+.tickets-list li {
+    font-size: 15px;
+    color: #757575;
+    list-style-type: none;
+    padding: 11px 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+.tickets-list .sold-out {
+    background-color: #f44336;
+    padding: 3px 4px;
+    margin-left: 16px;
+    color: white;
+}
+
+.tickets-list .quantity {
+color: white;
+background-color: black;
+border-radius: 50%;
+padding: 2px 8px;
+float: right;
+}
+
+.place-list{
+margin: 16px -8px 0;
+}
+.place-item{
+    width: 33.33333%;
+    float: left;
+    padding: 0 8px;
+}
+.place-img{
+    width: 100%;
+    display: block;
+}
+
+.place-img:hover {
+    opacity: 0.6;
+}
+
+.place-body{
+background-color: #fff;
+padding: 16px;
+}
+.place-heading{
+font-size: 15px;
+margin: 15px 0;
+display: inline-block;
+}
+.place-time{
+font-size: 15px;
+margin-bottom: 15px;
+opacity: 0.6;
+}
+.place-desc{
+font-size: 15px;
+line-height: 1.4;
+margin: 15px 0;
+}
+.place-buy-btn{
+color: #fff;
+background-color: #000;
+text-decoration: none;
+padding: 11px 13px;
+display: inline-block;
+margin-bottom: 16px;
+
+}
+
+.place-buy-btn:hover{
+    color: #000;
+    background-color: #ddd;
+}
+
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.modal.open{
+    display: flex;
+}
+.modal .container{
+width: 600px;
+max-width: calc(100%-32px);
+min-height: 200px;
+background: #fff;
+position: relative;
+animation: modalFadeIn ease 0.5s;
+}
+
+.modal-header {
+    font-size: 30px;
+    color: #fff;
+    background: #009688;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.modal-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #fff;
+    padding: 12px;
+    opacity: 0.8;
+}
+.modal-close:hover {
+    opacity: 1;
+    background: #ddd;
+}
+
+.header-bag {
+    padding-right: 15px;
+}
+
+.modal-body {
+    padding: 16px;
+}
+
+.modal-label {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+.modal-input {
+    padding: 8px 0;
+    margin-bottom: 24px;
+    width: 100%;
+    border: 1px solid #ccc;
+}
+
+.buy-tickets {
+    width: 100%;
+    padding: 18px 0;
+    background: #009688;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.buy-tickets:hover {
+    background: #ccc;
+}
+
+
+.modal-help {
+    padding: 17px;
+    text-align: right;
+}
+
+/* contact-content */
+.contact-content{
+    margin-top: 26px;
+}
+
+.contact-info {
+font-size: 18px;
+line-height: 1.5;
+}
+
+.contact-info i[class*="ti-"] {
+    width: 30px;
+    display: inline-block;
+}
+
+.contact-form {
+    font-size: 15px;
+}
+
+.contact-form .form-control {
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.form-submit-btn {
+    background: black;
+    color: white;
+    border: 1px solid #000;
+    padding: 10px 16px;
+    float: right;
+    appearance: none;
+    -webkit-appearance:none;  /* bỏ định dạng mặc định trên trình duyệt safari */
+}
+
+.form-submit-btn:hover {
+    cursor: pointer;
+    background: #ccc;
+    color: #000;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-140px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.map-section img{
+    width: 100%;
+}
+
+#footer{
+    padding: 64px 16px;
+    text-align: center;  
+}
+
+#footer .socials-list {
+    font-size: 24px;
+}
+
+#footer .socials-list a {
+    color: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+}
+#footer .copyright a:hover,
+#footer .socials-list a:hover {
+    color: rgba(0, 0, 0, 0.4); 
+}
+
+#footer .copyright {
+    font-size: 15px;
+    margin-top: 15px;
+    color: rgba(0, 0, 0, 0.6);
+
+}
+
+#footer .copyright a {
+    color: rgba(0, 0, 0, 0.6);
+
+}
